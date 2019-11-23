@@ -1,0 +1,30 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  deploy:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout current branch
+      uses: actions/checkout@v1
+    - name: Setup node.js
+      uses: actions/setup-node@v1
+    - name: Install dependencies
+      run: npm ci
+    - name: Lint project
+      run: npm run lint
+    - name: Generate pages
+      run: npm run generate
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v2.5.0
+      env:
+        PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
+        PUBLISH_BRANCH: gh-pages
+        PUBLISH_DIR: ./dist
+ 
