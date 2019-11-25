@@ -122,7 +122,7 @@ export default {}
 
 <style lang="sass" scoped>
 .logo
-    min-width: 100%;
-    @media (min-width: 1000px)
-      min-width: 600px;
+  width: 100%;
+  @media (min-width: 1000px)
+    max-width: 600px;
 </style>

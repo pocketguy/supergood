@@ -17,7 +17,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['@/assets/reset.css'],
+  css: ['@/assets/reset.css', '@/assets/fonts/AvenirNextCyr-Bold.css'],
   /*
    ** Plugins to load before mounting the App
    */
