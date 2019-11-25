@@ -1,8 +1,17 @@
 <template>
   <div class="container">
-    <h1 class="title">supergood</h1>
+    <Logo />
   </div>
 </template>
+
+<script>
+import Logo from '~/components/Logo.vue'
+export default {
+  components: {
+    Logo
+  }
+}
+</script>
 
 <style lang="sass" scoped>
 .container
@@ -10,6 +19,4 @@
   display: flex
   align-items: center
   justify-content: center
-  .title
-    font-size: 80px
 </style>
