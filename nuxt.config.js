@@ -32,7 +32,7 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxtjs/pwa'],
+  modules: ['@nuxtjs/pwa', '@nuxtjs/sitemap'],
   /*
    ** Build configuration
    */
@@ -41,5 +41,8 @@ export default {
      ** You can extend webpack config here
      */
     extend(config, ctx) {}
+  },
+  sitemap: {
+    hostname: 'https://supergood.online'
   }
 }
